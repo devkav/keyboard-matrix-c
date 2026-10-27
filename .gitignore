@@ -1,0 +1,11 @@
+build
+.claude
+
+# other build folders (e.g. build-debug from a second preset)
+build-*/
+
+# per-user CMake presets (CMakePresets.json is shared, this one isn't)
+CMakeUserPresets.json
+
+# clangd index cache
+.cache/
