@@ -1,1 +1,6 @@
-picocom -b 115200 /dev/ttyACM1
+PORT=/dev/serial/by-id/usb-Raspberry_Pi_Pico_E66480454F607937-if00
+
+# the port disappears while the Pico resets, so wait for it to come back
+until [ -e "$PORT" ]; do sleep 0.2; done
+
+picocom -b 115200 "$PORT"
